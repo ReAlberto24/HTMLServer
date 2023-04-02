@@ -135,3 +135,5 @@ requests.bin
 test.py
 .idea
 gui/
+bau.py
+logs/

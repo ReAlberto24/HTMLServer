@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Goofy ahh controller</title>
+
+    <link href="/admin/style.css" rel="stylesheet">
+
+    <!-- FONTS: "font-family: 'Rubik', sans-serif;" -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body onload="dashboard_changer('dashboard');">
+<div id="sidebar">
+    <div id="upper_text">
+        <span class="upper">Hello</span>
+        <br>
+        <span class="lower">World</span>
+    </div>
+    <ul>
+        <li class="bnt-li">
+            <i class="bi bi-speedometer"></i>
+            <button onclick="dashboard_changer('dashboard');">
+                <span>Dashboard</span>
+            </button>
+        </li>
+        <li class="bnt-li">
+            <i class="bi bi-file-earmark"></i>
+            <button onclick="dashboard_changer('pages');">
+                <span>Pages</span>
+            </button>
+        </li>
+        <li class="bnt-li">
+            <i class="bi bi-terminal"></i>
+            <button onclick="dashboard_changer('shell');">
+                <span>Shell</span>
+            </button>
+        </li>
+        <li class="bnt-li">
+            <i class="bi bi-gear"></i>
+            <button onclick="dashboard_changer('configuration');">
+                <span>Configuration</span>
+            </button>
+        </li>
+        <li class="bnt-li">
+            <i class="bi bi-tools"></i>
+            <button onclick="dashboard_changer('manage');">
+                <span>Manage</span>
+            </button>
+        </li>
+    </ul>
+</div>
+<div id="contents">
+    <!-- <div>
+        <canvas id="myChart"></canvas>
+    </div> -->
+    <div id="server_stats">
+        <i class="bi bi-link-45deg"></i>
+        <a
+                id="server_stats-link"
+                style="color: #fff; text-decoration: none; padding: 5px;"
+                target="_blank"></a><br>
+        <br>
+
+        <i class="bi bi-clock-history"></i>
+        <span id="server_stats-up-for" style="padding: 5px;">
+                <span>Up for</span>
+                <span id="server_stats-up-time" style="color: #00ff00;"></span>
+            </span><br>
+        <span id="server_stats-datetime" style="padding: 25px;"></span><br>
+        <br>
+
+        <i class="bi bi-folder"></i>
+        <span id="server_stats-size" style="padding: 5px;">
+                <span style="color: gray">Loading ...</span>
+            </span><br>
+        <br>
+
+    </div>
+</div>
+
+
+</body>
+
+<!-- charts.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/admin/index.js"></script>
+</html>

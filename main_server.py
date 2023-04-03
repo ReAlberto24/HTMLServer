@@ -56,7 +56,7 @@ def flask_index():
         force_flush=False
     )
     # return send_file('html/index.html')
-    return redirect(location='/html/index', code=302)
+    return redirect(location='/html/index.html', code=302)
 
 
 @app.route('/js/<js_type>/<file>', methods=['GET'])

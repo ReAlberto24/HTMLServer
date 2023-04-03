@@ -32,60 +32,8 @@ var server_stats_up = null;
 function dashboard_changer(type) {
     var contents_div = document.getElementById('contents');
     switch(type) {
-        case 'dashboard':
+        case 'load_dashboard':
             server_stats_up = document.getElementById('server_stats-up-time');
-            contents_div.innerHTML = `
-            <!-- <div>
-                <canvas id="myChart"></canvas>
-            </div> -->
-            <div id="server_stats">
-                <i class="bi bi-link-45deg"></i>
-                <a 
-                    id="server_stats-link" 
-                    style="color: #fff; text-decoration: none; padding: 5px;"
-                    target="_blank"></a><br>
-                <br>
-
-                <i class="bi bi-clock-history"></i>
-                <span id="server_stats-up-for" style="padding: 5px;">
-                    <span>Up for</span>
-                    <span id="server_stats-up-time" style="color: #00ff00;"></span>
-                </span><br>
-                <span id="server_stats-datetime" style="padding: 25px;"></span><br>
-                <br>
-
-                <i class="bi bi-folder"></i>
-                <span id="server_stats-size" style="padding: 5px;">
-                    <span style="color: gray">Loading ...</span>
-                </span><br>
-                <br>
-
-            </div>
-            
-            <!-- <script>
-                const ctx = document.getElementById('myChart');
-            
-                var chart = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                    }
-                }
-                });
-            </script> -->
-            `;
-
             const date = new Date(server_time);
 
             const options = {
@@ -125,23 +73,37 @@ function dashboard_changer(type) {
             };
 
             xhr.send();
+            break;
+        case 'dashboard':
+            
+            contents_div.innerHTML = ``;
 
+            document.title = 'Server - Dashboard';
+            dashboard_changer('load_dashboard')  
             break;
 
         case 'pages':
             contents_div.innerHTML = ``;
+
+            document.title = 'Server - Pages';
             break;
         
         case 'shell':
             contents_div.innerHTML = ``;
+            
+            document.title = 'Server - Shell';
             break;
         
         case 'configuration':
             contents_div.innerHTML = ``;
+
+            document.title = 'Server - Configuration';
             break;
         
         case 'manage':
             contents_div.innerHTML = ``;
+
+            document.title = 'Server - Manage';
             break;
     }
 }

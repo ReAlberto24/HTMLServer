@@ -15,7 +15,7 @@
 
 
 
-body div#sidebar {
+div#sidebar {
     background-color: var(--background_color);
 
     border-right: 2px solid #38313e;
@@ -31,23 +31,23 @@ body div#sidebar {
     justify-content: center;
 }
 
-body div#sidebar * {
+div#sidebar * {
     font-size: 16px;
 }
 
 
-body div#sidebar div#upper_text {
+div#sidebar div#upper_text {
     width: 90%;
     padding-top: 10px;
 }
 
-body div#sidebar div#upper_text span.upper {
+div#sidebar div#upper_text span.upper {
     font-size: 26px;
     text-decoration: none;
     color: #c8c8c8;
 }
 
-body div#sidebar div#upper_text span.lower {
+div#sidebar div#upper_text span.lower {
     font: italic;
     font-size: 21px;
     text-decoration: none;
@@ -56,7 +56,7 @@ body div#sidebar div#upper_text span.lower {
 }
 
 
-body div#sidebar ul {
+div#sidebar ul {
     position: absolute;
     bottom: 0;
 
@@ -68,7 +68,7 @@ body div#sidebar ul {
     margin-bottom: 20px;
 }
 
-body div#sidebar ul li.bnt-li {
+div#sidebar ul li.bnt-li {
     white-space: nowrap;
 
     width: 100%;
@@ -87,12 +87,12 @@ body div#sidebar ul li.bnt-li {
     filter: brightness(120%);
 }
 
-body div#sidebar ul li.bnt-li:hover {
+div#sidebar ul li.bnt-li:hover {
     background-color: var(--background_color);
     filter: brightness(150%);
 }
 
-body div#sidebar ul li.bnt-li button {
+div#sidebar ul li.bnt-li button {
     background-color: transparent;
     width: 100%;
     padding: 10px 0px;
@@ -106,13 +106,13 @@ body div#sidebar ul li.bnt-li button {
     cursor: pointer;
 }
 
-body div#sidebar ul li.bnt-li i {
+div#sidebar ul li.bnt-li i {
     color: #c8c8c8;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-body div#contents {
+div#contents {
     margin-left: calc(var(--sidebar_size) + 2px);
     background-color: var(--background_color);
 
@@ -123,13 +123,13 @@ body div#contents {
     display: flex;
 }
 
-body div#contents * {
+div#contents * {
     color: #c8c8c8;
 
     margin: 10px 10px;
 }
 
-body div#contents div#server_stats {
+div#contents div#server_stats {
     width: 400px; 
     height: 200px;
 
@@ -141,7 +141,19 @@ body div#contents div#server_stats {
     padding: 10px 10px;
 }
 
-body div#contents div#server_stats * {
+div#contents div#server_requests {
+    /* width: 400px; */
+    height: 330px;
+
+    background-color: var(--background_color);
+    filter: brightness(120%);
+
+    border-radius: 12px;
+    /* margin: 10px 10px; */
+    padding: 10px 10px;
+}
+
+div#contents div#server_stats * {
     padding: 0 0;
     margin: 0 0;
 }
